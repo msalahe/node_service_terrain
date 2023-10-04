@@ -5,8 +5,10 @@ const terrainDaoPrisma = require("../../dao/terrain-dao-prisma");
 const TerrainsService = require("../../services/terrains-service");
 let routes = new Router();
 let terrainService = new TerrainsService(terrainDao, terrainDaoPrisma);
-routes.get("/", (req, res) => {
+routes.get("/terrain", (req, res) => {
+   console.log("terrain");
    let data = terrainService.list();
+   console.log(data);
    data.then(result => res.send(result));
 
 });
