@@ -1,8 +1,11 @@
-FROM node:16
+FROM node:16.13
 
 WORKDIR /app
 
 COPY package*.json ./
+
+COPY ../../../terrain.json /app/terrain.json
+
 
 RUN npm install
 

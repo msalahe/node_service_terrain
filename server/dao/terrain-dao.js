@@ -6,7 +6,7 @@ class TerrainDao{
     }
     async list(){
     let jr = new JSONReader();
-       let data = await jr.read("terrain.json");
+       let data = await jr.read("./terrain.json");
    
         return data;
      
